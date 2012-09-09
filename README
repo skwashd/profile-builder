@@ -1,0 +1,12 @@
+Installation Profile Builder for Drupal
+
+This is a simple system for building installation profiles for Drupal 7. The
+idea behind the system is that you create a unique installation profile for
+each project, but that profile is based on a common foundation. The 
+template profile should be maintained and refined over time, so new projects
+benefit from the improvements.
+
+The base.* files are an example profile.  The build-profile.sh script is used
+to generate the installation profile.
+
+You can learn more about this on my blog at [INSERT URL]

@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the the PROFILE_NAME install profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function PROFILE_NAMESPACE_install() {
+  // Enable the content in the content region, everything else will be handled by contexts exported to features.
+  $default_theme = variable_get('theme_default', 'bartik');
+  $values = array(
+    array(
+      'module' => 'system',
+      'delta' => 'main',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'content',
+      'pages' => '',
+      'cache' => -1,
+    ),
+  );
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+
+  // Only permit administrators to create users.
+  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
+
+  // Only allow authenticated users to view content.
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
+}
+
+// Add hook_update_N() implementations below here as needed.
