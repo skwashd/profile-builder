@@ -9,6 +9,9 @@
  *
  * Performs actions to set up the site for this profile.
  *
+ * Try to keep this lightweight and handle as much config as possible in
+ * features (or modules using CTools exportables).
+ *
  * @see system_install()
  */
 function PROFILE_NAMESPACE_install() {

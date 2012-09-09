@@ -9,4 +9,9 @@ benefit from the improvements.
 The base.* files are an example profile.  The build-profile.sh script is used
 to generate the installation profile.
 
-You can learn more about this on my blog at [INSERT URL]
+You should try to keep your installation profiles pretty lightweight and handle
+most of your configuration in features. Configuration changes that don't fit
+in a module or a feature can be included in the installation profile.
+
+You can learn more about this on my blog at 
+http://davehall.com.au/blog/dave/2012/09/09/managing-project-installation-profiles
