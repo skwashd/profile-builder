@@ -1,6 +1,9 @@
-name = PROFILE_NAME
-description = PROFILE_DESCRIPTION
+name = MODULE_NAME
+description = MODULE_DESCRIPTION
 core = 7.x
+
+hidden = TRUE
+required = TRUE
 
 depedencies[]=admin
 depedencies[]=bean
@@ -59,4 +62,5 @@ depedencies[]=uuid
 depedencies[]=views
 depedencies[]=views_ui
 depedencies[]=wysiwyg
+
 

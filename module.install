@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * MODULE_NAME installation/update functions.
+ */
+
+// Insert hook_update_N() implementations as needed.

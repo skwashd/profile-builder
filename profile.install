@@ -42,4 +42,3 @@ function PROFILE_NAMESPACE_install() {
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
 }
 
-// Add hook_update_N() implementations below here as needed.
