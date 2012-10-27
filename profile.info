@@ -2,5 +2,5 @@ name = PROFILE_NAME
 description = PROFILE_DESCRIPTION
 core = 7.x
 
-depedencies[]= PROFILE_NAMESPACE_base
+dependencies[]= PROFILE_NAMESPACE_base
 
